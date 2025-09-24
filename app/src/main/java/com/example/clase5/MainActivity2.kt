@@ -43,7 +43,7 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
 
-        private fun setupTabs(){
+    private fun setupTabs() {
         val viewPager = binding.viewPager
         viewPager.adapter = ViewPagerAdapter(this)
 
