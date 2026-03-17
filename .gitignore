@@ -1,15 +1,52 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+# 🔹 Archivos de sistema
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+Thumbs.db
+
+# 🔹 Archivos de configuración local (NO subir)
 local.properties
+
+# 🔹 Gradle
+.gradle/
+build/
+*/build/
+
+# 🔹 Archivos compilados
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# 🔹 Logs
+*.log
+
+# 🔹 Archivos temporales
+*.tmp
+*.swp
+*~
+
+# 🔹 Android Studio / IntelliJ
+.idea/
+*.iml
+
+# 🔹 Excepciones importantes (SÍ se suben)
+!.idea/codeStyles/
+!.idea/runConfigurations/
+
+# 🔹 NDK / C++
+.externalNativeBuild/
+.cxx/
+
+# 🔹 Capturas
+captures/
+
+# 🔹 Archivos generados por Firebase / Google Services (opcional)
+google-services.json
+
+# 🔹 Keystore (MUY IMPORTANTE no subir)
+*.jks
+*.keystore
+
+# 🔹 Archivos de configuración sensibles
+*.properties
+!gradle.properties
