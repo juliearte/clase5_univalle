@@ -2,17 +2,12 @@ package com.example.clase5
 
 import ViewPagerAdapter
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.viewpager2.widget.ViewPager2
 import com.example.clase5.databinding.ActivityMain2Binding
-import com.example.clase5.databinding.ActivityMainBinding
-import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-
 class MainActivity2 : AppCompatActivity() {
 
     lateinit var binding: ActivityMain2Binding
@@ -56,26 +51,19 @@ class MainActivity2 : AppCompatActivity() {
         }.attach() //para mostrar las pestañas
     }
 
-    private fun setupButtonNavigation(){
-
+    private fun setupButtonNavigation() {
         binding.btnNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.btn1 ->
+                    startActivity(Intent(this, MainActivity::class.java))
 
-            when(item.itemId){
-                R.id.btn1 -> {
-                    startActivity(Intent(this,MainActivity::class.java))
-                    true
-                }
-                R.id.btn2 -> {
-                    Toast.makeText(this, "Favorito",Toast.LENGTH_SHORT).show()
-                    true
-                }
+                R.id.btn2 ->
+                    Toast.makeText(this, "Favorito", Toast.LENGTH_SHORT).show()
 
-                R.id.btn3 -> {
-                    Toast.makeText(this, "Música",Toast.LENGTH_SHORT).show()
-                    true
-                }
-                else -> false
+                R.id.btn3 ->
+                    Toast.makeText(this, "Música", Toast.LENGTH_SHORT).show()
             }
+            true
         }
     }
 }

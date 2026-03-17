@@ -7,10 +7,4 @@
 
     <style name="Theme.Clase5" parent="Base.Theme.Clase5" />
 
-    <style name="toolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
-        <item name="android:colorControlNormal">@color/white</item>
-        <item name="titleTextColor">@color/white</item>
-    </style>
-
-
 </resources>
